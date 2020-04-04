@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports = {
 	title: "@sofiane-d/autocomplete-react",
-	version: "version 1.0.0",
+	version: "version 1.0.0-rc.2",
 	usageMode: "expand",
 	styleguideDir: "build",
 	sections: [

@@ -6,11 +6,11 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "docs": "npx styleguidist server --open",
-    "docs build": "npx styleguidist build",
-    "docs deploy": "firebase deploy --only hosting:autocomplete-react"
+    "docs:build": "npx styleguidist build",
+    "docs:deploy": "firebase deploy --only hosting:autocomplete-react"
   },
   "dependencies": {
-    "@sofiane-d/autocomplete-react": "^1.0.0",
+    "@sofiane-d/autocomplete-react": "^1.0.0-rc.2",
     "react": "^16.13.0"
   },
   "devDependencies": {

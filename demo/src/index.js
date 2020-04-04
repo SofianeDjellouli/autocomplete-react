@@ -1,5 +1,5 @@
 import { render } from "react-dom";
-import Autocomplete from "../../src";
+import Autocomplete from "../../es";
 import React, { useCallback, useState } from "react";
 import { getColour, getPlaceholder } from "./utils";
 

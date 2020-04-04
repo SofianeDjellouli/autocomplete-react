@@ -1,6 +1,6 @@
 {
   "name": "@sofiane-d/autocomplete-react",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.2",
   "description": "A customizable React autocomplete component",
   "author": "Sofiane Djellouli",
   "license": "ISC",
@@ -34,10 +34,10 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component --copy-files",
     "clean": "nwb clean-module && nwb clean-demo",
+    "build": "nwb build-react-component --copy-files",
     "prepublishOnly": "npm run build",
-    "publish": "npm publish --access=public",
+    "deploy": "npm publish --access=public",
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
