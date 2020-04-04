@@ -1,15 +1,25 @@
 {
-  "name": "autocomplete-react",
+  "name": "@sofiane-d/autocomplete-react",
   "version": "1.0.0",
   "description": "A customizable React autocomplete component",
   "author": "Sofiane Djellouli",
   "license": "ISC",
+  "homepage": "https://autocomplete-react.firebaseapp.com",
   "bugs": "https://github.com/SofianeDjellouli/autocomplete-react/issues",
   "keywords": [
-    "autocomplete",
+    "enhanced input",
     "react",
-    "autofill",
-    "autosuggest"
+    "autocomplete",
+    "autosuggest",
+    "typeahead",
+    "dropdown",
+    "select",
+    "combobox",
+    "omnibox",
+    "accessibility",
+    "WAI-ARIA",
+    "multiselect",
+    "multiple selection"
   ],
   "repository": {
     "type": "git",
@@ -27,27 +37,23 @@
     "build": "nwb build-react-component --copy-files",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
+    "publish": "npm publish --access=public",
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "lodash.escaperegexp": "4.x",
-    "react": "16.x",
     "prop-types": "15.x",
+    "lodash.escaperegexp": "4.x",
     "react-uid": "2.x"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": ">=0.14.9"
+  },
   "devDependencies": {
     "nwb": "0.24.x",
-    "react-dom": "^16.13.1"
-  },
-  "author": "",
-  "homepage": "",
-  "license": "MIT",
-  "repository": "",
-  "keywords": [
-    "react-component"
-  ]
+    "react-dom": "^16.13.1",
+    "react": "^16.13.1"
+  }
 }

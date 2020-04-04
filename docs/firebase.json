@@ -1,0 +1,8 @@
+{
+	"hosting": {
+		"site": "autocomplete-react",
+		"public": "public",
+		"public": "build",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	}
+}

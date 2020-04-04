@@ -1,0 +1,2 @@
+```jsx { "file": "../index.js" }
+```

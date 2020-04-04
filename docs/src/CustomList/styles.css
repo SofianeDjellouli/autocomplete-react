@@ -1,0 +1,10 @@
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+}
+.paper-style {
+	width: 100%;
+	position: absolute;
+	z-index: 3;
+}

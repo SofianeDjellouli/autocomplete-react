@@ -1,0 +1,34 @@
+{
+  "author": "Sofiane Djellouli",
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "docs": "npx styleguidist server --open",
+    "docs build": "npx styleguidist build",
+    "docs deploy": "firebase deploy --only hosting:autocomplete-react"
+  },
+  "dependencies": {
+    "@sofiane-d/autocomplete-react": "^1.0.0",
+    "react": "^16.13.0"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.9.5",
+    "prettier": "^1.19.1",
+    "react-dom": "^16.13.0",
+    "react-scripts": "^3.4.0",
+    "react-styleguidist": "^11.0.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
