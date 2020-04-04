@@ -9,7 +9,6 @@ import {
 	Collapse,
 } from "@material-ui/core";
 import { uid } from "react-uid";
-// import { Search, Clear } from "../../svgs";
 import Autocomplete, {
 	useHighlight,
 	replaceJSX,
@@ -17,6 +16,7 @@ import Autocomplete, {
 	useClose,
 } from "@sofiane-d/autocomplete-react";
 import { getState } from "../utils";
+import { Search, Clear } from "./icons";
 import "./styles.css";
 
 const _getState = (value) => getState(value).slice(0, 5);
@@ -57,11 +57,15 @@ const Children = ({
 				onKeyDown={handleKeyDown}
 				onChange={handleChange}
 				InputProps={{
-					startAdornment: <InputAdornment position="start">{/*<Search />*/}</InputAdornment>,
+					startAdornment: (
+						<InputAdornment position="start">
+							<Search />
+						</InputAdornment>
+					),
 					...(label && {
 						endAdornment: (
 							<InputAdornment position="end">
-								{/*<Clear onClick={clearStateAndValue} />*/}
+								<Clear onClick={clearStateAndValue} />
 							</InputAdornment>
 						),
 					}),

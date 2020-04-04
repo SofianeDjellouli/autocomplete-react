@@ -1,5 +1,6 @@
 {
   "author": "Sofiane Djellouli",
+  "license": "ISC",
   "scripts": {
     "build": "react-scripts build",
     "start": "react-scripts start",

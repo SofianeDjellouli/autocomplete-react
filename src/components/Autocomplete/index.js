@@ -18,8 +18,8 @@ export const Autocomplete = ({
 }) => {
 	const { value, setValue, list, setList, inputRef, ...props } = useOverride(_props); // for props overriding
 
-	const handleLabel = useCallback(e => (e ? (typeof e === "string" ? e : getLabel(e)) : ""), [
-		getLabel
+	const handleLabel = useCallback((e) => (e ? (typeof e === "string" ? e : getLabel(e)) : ""), [
+		getLabel,
 	]);
 
 	const label = useMemo(() => handleLabel(state), [handleLabel, state]);
@@ -27,7 +27,7 @@ export const Autocomplete = ({
 	const filteredList = useMemo(
 		() =>
 			Array.isArray(list) && list.length
-				? list.filter(filterList || (state ? e => handleLabel(e) !== label : Boolean))
+				? list.filter(filterList || (state ? (e) => handleLabel(e) !== label : Boolean))
 				: [],
 		[list, filterList, handleLabel, state, label]
 	);
@@ -47,7 +47,7 @@ export const Autocomplete = ({
 	}, [setValue, inputRef, focusOnClear, clearState]);
 
 	const onSelect = useCallback(
-		i => {
+		(i) => {
 			if (onValue) onValue(filteredList[i], { i, value, list: filteredList });
 			if (handleSelect) handleSelect({ i, setList, setValue });
 			else {
@@ -66,7 +66,7 @@ export const Autocomplete = ({
 			setList,
 			setValue,
 			clearOnSelect,
-			handleSelect
+			handleSelect,
 		]
 	);
 
@@ -74,13 +74,13 @@ export const Autocomplete = ({
 	const newCache = useRef(); // Prevents async getList function from overriding setting list from the cache
 
 	const getData = useCallback(
-		value => {
+		(value) => {
 			if (cache && memo.current && memo.current.hasOwnProperty(value)) {
 				newCache.current = false;
 				setList(memo.current[value]);
 			} else {
 				newCache.current = true;
-				return Promise.resolve(getList(value)).then(result => {
+				return Promise.resolve(getList(value)).then((result) => {
 					if (newCache.current && result) {
 						setList(result);
 						if (cache && memo.current) memo.current[value] = result;
@@ -113,17 +113,17 @@ export const Autocomplete = ({
 		setValue,
 		setList,
 		handleLabel,
-		...props
+		...props,
 	};
 	return <>{children(data)}</>;
 };
 
-const returnValue = e => e;
+const returnValue = (e) => e;
 
 Autocomplete.defaultProps = {
 	clearOnSelect: false,
 	focusOnClear: true,
-	getLabel: e => e.label,
+	getLabel: (e) => e.label,
 	getList: () => [],
 	cache: true,
 	state: "",
@@ -137,7 +137,7 @@ Autocomplete.defaultProps = {
 	getErrorProps: returnValue,
 	getLabelProps: returnValue,
 	getWrapperProps: returnValue,
-	getInputProps: returnValue
+	getInputProps: returnValue,
 };
 
 Autocomplete.propTypes = {
@@ -153,8 +153,8 @@ Autocomplete.propTypes = {
 	 * @param {array} props.list - The current list.<br/>
 	 * @param {Object} props.listRef - A ref to be passed to the list wrapper.<br/>
 	 * @param {function} props.onSelect - A function to handle the select event. It takes the index of the selected item as an argument (string). It will trigger both the `onValue` and the `handleSelect` props if they are specified.<br/>
-	 * @param {function} props.setList - Function to set the list. See the setList prop of `Autocomplete`.<br/>
-	 * @param {function} props.setValue - Function to set the value. See the setValue prop of `Autocomplete`.<br/>
+	 * @param {function} props.setList - Function to set the list. See the setList prop below.<br/>
+	 * @param {function} props.setValue - Function to set the value. See the setValue prop below.<br/>
 	 * @param {string} props.value - The current value.<br/>
 	 * @param {Object} props.wrapperRef - A ref to be passed to the component wrapper. Useful for the [useClose hook](#useclose).<br/>
 	 */
@@ -183,7 +183,7 @@ Autocomplete.propTypes = {
 	/**
 	 * Controls the props that will be spreaded to the error component.
 	 * @param {Object} props<br/>
-	 * @param {string} props.error<br/> - The error itself.
+	 * @param {string} props.error - The error itself.
 	 * @param {Object} props.domProps - Props spreaded to the React DOM element.<br/>
 	 */
 	getErrorProps: PropTypes.func,
@@ -324,5 +324,5 @@ Autocomplete.propTypes = {
 	/**
 	 * Ref to be passed to the wrapper component. Useful for the [useClose hook](#useclose).
 	 */
-	wrapperRef: PropTypes.object
+	wrapperRef: PropTypes.object,
 };

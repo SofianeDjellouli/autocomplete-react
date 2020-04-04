@@ -18,12 +18,5 @@
 .autocomplete-input svg {
 	position: absolute;
 	right: 10px;
-
-	color: #185a9d;
-	width: 1em;
-	overflow: visible;
-	display: inline-block;
-	font-size: inherit;
-	height: 1em;
-	vertical-align: -0.125em;
 }
+

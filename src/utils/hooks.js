@@ -5,17 +5,17 @@ export const useHighlight = ({ onSelect, listRef, setList }) => {
 	const [highlight, setHighlight] = useState();
 
 	const handleMouseEnter = useCallback(
-		e => {
+		(e) => {
 			if (e && e.currentTarget && e.currentTarget.dataset && e.currentTarget.dataset.i) {
 				const index = parseInt(e.currentTarget.dataset.i);
-				setHighlight(highlight => (highlight === index ? highlight : index));
+				setHighlight((highlight) => (highlight === index ? highlight : index));
 			}
 		},
 		[setHighlight]
 	);
 
 	const handleKeyDown = useCallback(
-		e => {
+		(e) => {
 			if (
 				[9, 13, 27, 38, 40].includes(e.keyCode) &&
 				listRef &&
@@ -47,7 +47,7 @@ export const useHighlight = ({ onSelect, listRef, setList }) => {
 						break;
 				}
 				let list = listRef.current,
-					items = [...list.children],
+					items = Array.prototype.slice.call(list.children),
 					itemsLength = items.length;
 				if (list !== items[0].offsetParent) list.style.position = "relative";
 				switch (e.keyCode) {
@@ -85,7 +85,7 @@ export const useHighlight = ({ onSelect, listRef, setList }) => {
 export const usePromise = ({
 	getData = () => undefined,
 	defaultError = "",
-	handleError = e => e.toString()
+	handleError = (e) => e.toString(),
 }) => {
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(defaultError);
@@ -95,14 +95,14 @@ export const usePromise = ({
 	}, [defaultError]);
 
 	const handleGetData = useCallback(
-		value =>
-			new Promise(resolve => {
+		(value) =>
+			new Promise((resolve) => {
 				setLoading(true);
 				if (error) setError("");
 				resolve(value);
 			})
 				.then(getData)
-				.catch(e => {
+				.catch((e) => {
 					if (isDev) console.error(e);
 					setError(handleError(e));
 				})

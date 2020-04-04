@@ -69,6 +69,18 @@ module.exports = {
 		},
 		{ description: "This library uses icons from [FontAwesome](https://fontawesome.com/license)" },
 	],
+	theme: {
+		color: {
+			codeBackground: "#272c34",
+			codeKeyword: "#66d9ef",
+			codeBase: "#fff",
+			codeString: "#a6e22e",
+			codeProperty: "#fff",
+			codeDeleted: "#fff",
+			codeVariable: "#e6db74",
+			codeFunction: "#e6db74",
+		},
+	},
 	updateExample(props, exampleFilePath) {
 		// props.settings are passed by any fenced code block, in this case
 		const { settings, lang } = props;
@@ -82,7 +94,7 @@ module.exports = {
 			// no longer needed
 			delete settings.file;
 			return {
-				content: fs.readFileSync(filepath, "utf8"),
+				content: fs.readFileSync(filepath, "utf8").replace(/\t/g, "  "),
 				settings,
 				lang,
 			};
