@@ -1,0 +1,29 @@
+.autocomplete-input {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.autocomplete-input input {
+	padding: 10px;
+	outline: none;
+	font-size: 1em;
+	width: 100%;
+	border: 1px solid #d3d3d3;
+	border-radius: 3px;
+}
+
+.autocomplete-error {
+	color: red;
+}
+.autocomplete-input svg {
+	position: absolute;
+	right: 10px;
+
+	color: #185a9d;
+	width: 1em;
+	overflow: visible;
+	display: inline-block;
+	font-size: inherit;
+	height: 1em;
+	vertical-align: -0.125em;
+}

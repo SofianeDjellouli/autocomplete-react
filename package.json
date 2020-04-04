@@ -1,7 +1,20 @@
 {
   "name": "autocomplete-react",
   "version": "1.0.0",
-  "description": "autocomplete-react React component",
+  "description": "A customizable React autocomplete component",
+  "author": "Sofiane Djellouli",
+  "license": "ISC",
+  "bugs": "https://github.com/SofianeDjellouli/autocomplete-react/issues",
+  "keywords": [
+    "autocomplete",
+    "react",
+    "autofill",
+    "autosuggest"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SofianeDjellouli/autocomplete-react.git"
+  },
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -11,7 +24,7 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component",
+    "build": "nwb build-react-component --copy-files",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo",
@@ -19,13 +32,15 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "react": "16.x"
+  "dependencies": {
+    "lodash.escaperegexp": "4.x",
+    "react": "16.x",
+    "prop-types": "15.x",
+    "react-uid": "2.x"
   },
+  "peerDependencies": {},
   "devDependencies": {
     "nwb": "0.24.x",
-    "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "author": "",

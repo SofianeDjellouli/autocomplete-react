@@ -1,9 +1,12 @@
-import React, {Component} from 'react'
+import { Autocomplete } from "./components";
+import {
+	usePromise,
+	useClose,
+	useHighlight,
+	useSetHighlightedValue,
+	replaceJSX,
+	debounce
+} from "./utils";
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-}
+export default Autocomplete;
+export { usePromise, useClose, useHighlight, useSetHighlightedValue, replaceJSX, debounce };

@@ -1,0 +1,13 @@
+.spin {
+	-webkit-animation: fa-spin 2s infinite linear;
+	animation: fa-spin 2s infinite linear;
+}
+.svg-style {
+	color: #185a9d;
+	width: 1em;
+	overflow: visible;
+	display: inline-block;
+	font-size: inherit;
+	height: 1em;
+	vertical-align: -0.125em;
+}
