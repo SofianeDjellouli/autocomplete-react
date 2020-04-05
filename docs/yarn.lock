@@ -1364,10 +1364,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@sofiane-d/autocomplete-react@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@sofiane-d/autocomplete-react/-/autocomplete-react-1.0.0.tgz#66f3b6752266d04ac578dc56999b2f76ed11bcc1"
-  integrity sha512-/nvurmQA9/pGGStV5QH2jxQlo1G9YgGM7RjLsg+r9+6wmZ0apo3dQYVNEHNBN13TXkH9Wo0ibuyHvFMhqgBmKg==
+"@sofiane-d/autocomplete-react@^1.0.0-rc.2":
+  version "1.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@sofiane-d/autocomplete-react/-/autocomplete-react-1.0.0-rc.2.tgz#967b0bf5b1acf479eb0680522cc56fd9a907b723"
+  integrity sha512-59pF5VMa+Xvy+13t2X+hp6eoNeRahxX/VdKp/aiJwCAUbJi0z1LOmeeRhgs5eyLA//PBo8fs5sqYv50+fttwSg==
   dependencies:
     lodash.escaperegexp "4.x"
     prop-types "15.x"

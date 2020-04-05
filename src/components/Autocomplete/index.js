@@ -19,7 +19,7 @@ export const Autocomplete = ({
 	const { value, setValue, list, setList, inputRef, ...props } = useOverride(_props); // for props overriding
 
 	const handleLabel = useCallback((e) => (e ? (typeof e === "string" ? e : getLabel(e)) : ""), [
-		getLabel,
+		getLabel
 	]);
 
 	const label = useMemo(() => handleLabel(state), [handleLabel, state]);
@@ -66,7 +66,7 @@ export const Autocomplete = ({
 			setList,
 			setValue,
 			clearOnSelect,
-			handleSelect,
+			handleSelect
 		]
 	);
 
@@ -113,7 +113,7 @@ export const Autocomplete = ({
 		setValue,
 		setList,
 		handleLabel,
-		...props,
+		...props
 	};
 	return <>{children(data)}</>;
 };
@@ -137,7 +137,7 @@ Autocomplete.defaultProps = {
 	getErrorProps: returnValue,
 	getLabelProps: returnValue,
 	getWrapperProps: returnValue,
-	getInputProps: returnValue,
+	getInputProps: returnValue
 };
 
 Autocomplete.propTypes = {
@@ -324,5 +324,5 @@ Autocomplete.propTypes = {
 	/**
 	 * Ref to be passed to the wrapper component. Useful for the [useClose hook](#useclose).
 	 */
-	wrapperRef: PropTypes.object,
+	wrapperRef: PropTypes.object
 };

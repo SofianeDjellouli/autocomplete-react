@@ -47,7 +47,7 @@ export const useHighlight = ({ onSelect, listRef, setList }) => {
 						break;
 				}
 				let list = listRef.current,
-					items = Array.prototype.slice.call(list.children),
+					items = Array.prototype.slice.call(list.children), // This syntax prevents a transpilation bug
 					itemsLength = items.length;
 				if (list !== items[0].offsetParent) list.style.position = "relative";
 				switch (e.keyCode) {
