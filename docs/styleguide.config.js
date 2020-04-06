@@ -105,7 +105,7 @@ module.exports = {
 		// const name = path.basename(componentPath, ".js");
 		// const dir = path.dirname(componentPath);
 		// return `import ${name} from "autocomplete-react";`;
-		return 'import Autocomplete from "autocomplete-react";';
+		return 'import Autocomplete from "@sofiane-d/autocomplete-react";';
 	},
 	ribbon: {
 		// Link to open on the ribbon click (required)

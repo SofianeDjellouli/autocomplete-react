@@ -4,7 +4,8 @@
   "scripts": {
     "start": "npx styleguidist server --open",
     "build": "npx styleguidist build",
-    "deploy": "firebase deploy --only hosting:autocomplete-react"
+    "deploy": "firebase deploy --only hosting:autocomplete-react",
+    "push": "yarn build ; yarn deploy"
   },
   "dependencies": {
     "@sofiane-d/autocomplete-react": "^1.0.0-rc.4",
