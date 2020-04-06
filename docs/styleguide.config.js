@@ -3,19 +3,19 @@ const fs = require("fs");
 
 module.exports = {
 	title: "@sofiane-d/autocomplete-react",
-	version: "version 1.0.0-rc.2",
+	version: "version 1.0.0-rc.4",
 	usageMode: "expand",
 	styleguideDir: "build",
 	sections: [
 		{
 			name: "Introduction",
-			content: "README.md",
+			content: "README.md"
 		},
 		{
 			name: "Component",
 			components: path.resolve(
 				"node_modules/@sofiane-d/autocomplete-react/es/components/Autocomplete/index.js"
-			),
+			)
 		},
 		{
 			name: "Examples",
@@ -28,8 +28,8 @@ module.exports = {
 						{ name: "Custom item", content: "src/CustomItem/README.md" },
 						{ name: "Custom error", content: "src/CustomError/README.md" },
 						{ name: "Custom children", content: "src/CustomChildren/README.md" },
-						{ name: "Styling", content: "src/styling.md" },
-					],
+						{ name: "Styling", content: "src/styling.md" }
+					]
 				},
 				{
 					name: "Custom control",
@@ -37,26 +37,26 @@ module.exports = {
 						{ name: "Control state", content: "src/ControlState/README.md" },
 						{ name: "Control list", content: "src/ControlList/README.md" },
 						{ name: "Control value", content: "src/ControlValue/README.md" },
-						{ name: "Control error", content: "src/ControlError/README.md" },
-					],
+						{ name: "Control error", content: "src/ControlError/README.md" }
+					]
 				},
 				{
 					name: "Handling the select event",
 					sections: [
 						{ name: "Clear on select", content: "src/ClearOnSelect/README.md" },
-						{ name: "Handle select", content: "src/HandleSelect/README.md" },
-					],
+						{ name: "Handle select", content: "src/HandleSelect/README.md" }
+					]
 				},
 				{
 					name: "A focus on getList",
 					sections: [
 						{
 							name: "Asynchrounously get the list",
-							content: "src/AsyncList/README.md",
-						},
-					],
-				},
-			],
+							content: "src/AsyncList/README.md"
+						}
+					]
+				}
+			]
 		},
 		{
 			name: "Utils",
@@ -64,10 +64,10 @@ module.exports = {
 				'Some hooks and utility functions to help you recreate the default state management in your custom children. They are all available as named import of `autocomplete-react`.<br/>Example: `import { useHighlight, usePromise } from "autocomplete-react";`<br/>You can see an example of a custom children function using these utils [here](#section-custom-children).',
 			sections: [
 				{ name: "Hooks", content: "src/hooks.md" },
-				{ name: "Functions", content: "src/functions.md" },
-			],
+				{ name: "Functions", content: "src/functions.md" }
+			]
 		},
-		{ description: "This library uses icons from [FontAwesome](https://fontawesome.com/license)" },
+		{ description: "This library uses icons from [FontAwesome](https://fontawesome.com/license)" }
 	],
 	theme: {
 		color: {
@@ -78,8 +78,8 @@ module.exports = {
 			codeProperty: "#fff",
 			codeDeleted: "#fff",
 			codeVariable: "#e6db74",
-			codeFunction: "#e6db74",
-		},
+			codeFunction: "#e6db74"
+		}
 	},
 	updateExample(props, exampleFilePath) {
 		// props.settings are passed by any fenced code block, in this case
@@ -96,7 +96,7 @@ module.exports = {
 			return {
 				content: fs.readFileSync(filepath, "utf8").replace(/\t/g, "  "),
 				settings,
-				lang,
+				lang
 			};
 		}
 		return props;
@@ -111,6 +111,6 @@ module.exports = {
 		// Link to open on the ribbon click (required)
 		url: "https://github.com/SofianeDjellouli/autocomplete-react",
 		// Text to show on the ribbon (optional)
-		text: "Fork me on GitHub",
-	},
+		text: "Fork me on GitHub"
+	}
 };

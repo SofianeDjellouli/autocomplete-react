@@ -6,4 +6,4 @@
 /umd
 npm-debug.log*
 /docs/build
-/docs/.firebase
+/docs/.firebase/*
