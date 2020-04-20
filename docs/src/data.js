@@ -8,14 +8,14 @@ export const colourOptions = [
   { value: "green", label: "Green", color: "#36B37E" },
   { value: "forest", label: "Forest", color: "#00875A" },
   { value: "slate", label: "Slate", color: "#253858" },
-  { value: "silver", label: "Silver", color: "#666666" }
+  { value: "silver", label: "Silver", color: "#666666" },
 ].sort((a, b) => a.value.localeCompare(b.value));
 
 export const flavourOptions = [
   { value: "vanilla", label: "Vanilla", rating: "safe" },
   { value: "chocolate", label: "Chocolate", rating: "good" },
   { value: "strawberry", label: "Strawberry", rating: "wild" },
-  { value: "salted-caramel", label: "Salted Caramel", rating: "crazy" }
+  { value: "salted-caramel", label: "Salted Caramel", rating: "crazy" },
 ].sort((a, b) => a.value.localeCompare(b.value));
 
 export const stateOptions = [
@@ -77,34 +77,34 @@ export const stateOptions = [
   { value: "WA", label: "Washington" },
   { value: "WV", label: "West Virginia" },
   { value: "WI", label: "Wisconsin" },
-  { value: "WY", label: "Wyoming" }
+  { value: "WY", label: "Wyoming" },
 ];
 
 export const optionLength = [
   { value: 1, label: "general" },
   {
     value: 2,
-    label: "Evil is the moment when I lack the strength to be true to the Good that compels me."
+    label: "Evil is the moment when I lack the strength to be true to the Good that compels me.",
   },
   {
     value: 3,
     label:
-      "It is now an easy matter to spell out the ethic of a truth: 'Do all that you can to persevere in that which exceeds your perseverance. Persevere in the interruption. Seize in your being that which has seized and broken you."
-  }
+      "It is now an easy matter to spell out the ethic of a truth: 'Do all that you can to persevere in that which exceeds your perseverance. Persevere in the interruption. Seize in your being that which has seized and broken you.",
+  },
 ];
 
 export const dogOptions = [
   { id: 1, label: "Chihuahua", type: "Dog" },
   { id: 2, label: "Bulldog", type: "dog" },
   { id: 3, label: "Dachshund", type: "dog" },
-  { id: 4, label: "Akita", type: "dog" }
+  { id: 4, label: "Akita", type: "dog" },
 ];
 
 export const groupOptions = [
   ...dogOptions.map((e, i) => ({ ...e, ...(i === 0 && { isNewGroup: true }) })),
   ...flavourOptions.map((e, i) => ({
     ...e,
-    ...(i === 0 && { isNewGroup: true, type: "Flavour" })
+    ...(i === 0 && { isNewGroup: true, type: "Flavour" }),
   })),
-  ...colourOptions.map((e, i) => ({ ...e, ...(i === 0 && { isNewGroup: true, type: "Color" }) }))
+  ...colourOptions.map((e, i) => ({ ...e, ...(i === 0 && { isNewGroup: true, type: "Color" }) })),
 ];

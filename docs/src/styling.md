@@ -1,4 +1,5 @@
 You can change the default styles by targeting their classes in your CSS:
+
 - `.autocomplete-wrapper`
 - `.autocomplete-list`
 - `.autocomplete-item`

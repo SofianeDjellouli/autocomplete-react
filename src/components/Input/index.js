@@ -4,12 +4,12 @@ import { Loading } from "../../svgs";
 import "./style.css";
 
 export const Error = ({ error, domProps = {} }) => {
-	return error && <p {...domProps}>{error}</p>;
+  return error && <p {...domProps}>{error}</p>;
 };
 
-export const Input = ({ ClearSelected, loading, wrapperDomProps = {}, domProps = {} }) => (
-	<div {...wrapperDomProps}>
-		<input {...domProps} />
-		{loading ? <Loading /> : <ClearSelected />}
-	</div>
+export const Input = ({ ClearSelected, loading, wrapperProps = {}, inputProps = {} }) => (
+  <div {...wrapperProps}>
+    <input {...inputProps} />
+    {loading ? <Loading /> : ClearSelected && <ClearSelected />}
+  </div>
 );

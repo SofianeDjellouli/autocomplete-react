@@ -1,13 +1,13 @@
 .custom-children-paper {
-	padding: 10px 30px;
-	border-radius: 31px !important;
+  padding: 10px 30px;
+  border-radius: 31px !important;
 }
 .svg-style {
-	color: #185a9d;
-	width: 1em;
-	overflow: visible;
-	display: inline-block;
-	font-size: inherit;
-	height: 1em;
-	vertical-align: -0.125em;
+  color: #185a9d;
+  width: 1em;
+  overflow: visible;
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  vertical-align: -0.125em;
 }

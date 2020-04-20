@@ -1,42 +1,42 @@
 /* Safari and Chrome */
 @-webkit-keyframes spin {
-	from {
-		-webkit-transform: rotate(0deg);
-		-o-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(360deg);
-		-o-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 @keyframes spin {
-	from {
-		-ms-transform: rotate(0deg);
-		-moz-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg);
-		-o-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-	to {
-		-ms-transform: rotate(360deg);
-		-moz-transform: rotate(360deg);
-		-webkit-transform: rotate(360deg);
-		-o-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 .spin {
-	-webkit-animation: fa-spin 2s infinite linear;
-	animation: spin 2s infinite linear;
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: spin 2s infinite linear;
 }
 .svg-style {
-	color: #185a9d;
-	width: 1em;
-	overflow: visible;
-	display: inline-block;
-	font-size: inherit;
-	height: 1em;
-	vertical-align: -0.125em;
+  color: #185a9d;
+  width: 1em;
+  overflow: visible;
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  vertical-align: -0.125em;
 }

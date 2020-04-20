@@ -41,19 +41,24 @@
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "nwb test-react --server",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags && rm -rf build/temp"
   },
   "dependencies": {
-    "prop-types": "15.x",
     "lodash.escaperegexp": "4.x",
+    "prop-types": "15.x",
     "react-uid": "2.x"
   },
   "peerDependencies": {
     "react": ">=0.14.9"
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "nwb": "0.24.x",
-    "react-dom": "^16.13.1",
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

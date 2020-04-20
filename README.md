@@ -11,15 +11,16 @@ Internally, it uses the [render props pattern](https://reactjs.org/docs/render-p
 ### Get started
 
 ```
-# With yarn  
+# With yarn
 yarn add @sofiane-d/autocomplete-react
 ```
+
 ```
 # With NPM
 npm i @sofiane-d/autocomplete-react
 ```
 
- **[Examples and docs](https://autocomplete-react.firebaseapp.com)**
+**[Examples and docs](https://autocomplete-react.firebaseapp.com)**
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/npm-package
